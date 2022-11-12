@@ -24,3 +24,11 @@ jobs:
     - name: Create local changes
       run: |
         ./bot.sh
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        author_email: "tao.isaman@gmail.com"
+        author_name: "tao-Isaman"
+        message: "update at $(date)"
+        
